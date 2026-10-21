@@ -145,4 +145,4 @@ def add_record():
 
 if __name__ == "__main__":
     # Local development only; do not expose this server publicly.
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
